@@ -372,6 +372,7 @@ export default {
               let data = res.data.data;
               let content = data.split(/\n+/);
               that.updateChapterData({ index, content, title }, reloadChapter);
+              document.title = [title, sessionStorage.getItem("bookName"), 'Legado Bookshelf'].join(' - ')
             } else {
               that.$message.error("书源正文解析错误！");
               let content = ["书源正文解析失败！"];
